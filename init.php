@@ -19,8 +19,8 @@ function start() {
         $telegramApi->sendMessage( $phrases[$index], $update->message->chat->id);
         return 0;
     }
+
+    sleep(5);
+    start();
     return 0;
 }
-
-sleep(5);
-start();
