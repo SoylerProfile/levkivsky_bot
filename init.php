@@ -1,6 +1,5 @@
 <?php
 
-function start() {
     include('vendor/autoload.php');
     include('TelegramBot.php');
 
@@ -19,8 +18,5 @@ function start() {
         $telegramApi->sendMessage( $phrases[$index], $update->message->chat->id);
         return 0;
     }
-
-    sleep(5);
-    start();
-    return 0;
-}
+    
+    include('init.php');
